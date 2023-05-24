@@ -11,11 +11,20 @@ router.get("/GET_SLEEP", async (
     res: Response<String>
 ) => { 
     try {
-        console.log("HELO1");
         await timeout(1000/50);
-        console.log("HELO2");
         res.status(200).send("ok")
     } catch (error) {
+        res.status(500).send("internal blabla")
         
+    }
+});
+router.get("/GET", async (
+    req: Request<{}, {}, {}>,
+    res: Response<String>
+) => { 
+    try {
+        res.status(200).send("ok")
+    } catch (error) {
+        res.status(500).send("internal blabla")
     }
 });
