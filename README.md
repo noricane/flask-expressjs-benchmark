@@ -1,4 +1,5 @@
 # flask-expressjs-benchmark
+Feel free to clone this repo and benchmarking the behavior.
 I decided on spawning 64 workers, to change 
 this value change the number after the -w flag in 
 the command. 
@@ -10,9 +11,9 @@ To run the servers from project directory:
 ( cd express ; npm run dev ) 
 ( cd flask ; gunicorn -w 64 'app:app' )
 
-#Benchmarking 
+## Benchmarking 
 The program used for benchmarking was JMeter.
-#Results from running Thread Group - 2
+### Results from running Thread Group - 2
 |Label                    |# Samples|Average|Median|90% Line|95% Line|99% Line|Min|Max  |Error %|Throughput|Received KB/sec|Sent KB/sec|
 |-------------------------|---------|-------|------|--------|--------|--------|---|-----|-------|----------|---------------|-----------|
 |GET_SLEEP 8080           |10000    |146    |27    |118     |261     |472     |19 |31407|0.160% |169.50014 |38.35          |20.66      |
